@@ -1,0 +1,10 @@
+langchain
+langchain-chroma
+langchain-core
+langchain-google-genai
+nltk
+numpy
+sentence-transformers
+scikit-learn
+transformers
+PyMuPDF   # provides 'fitz' for PDF handling
