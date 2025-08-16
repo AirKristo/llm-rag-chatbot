@@ -6,22 +6,22 @@ Overview
 
 The chatbot works in two modes:
 
-	Naive prompting – simply passing the user question to the LLM.
+* Naive prompting – simply passing the user question to the LLM.
 
-	RAG prompting – retrieving relevant text chunks from a knowledge base and including them in the prompt.
+* RAG prompting – retrieving relevant text chunks from a knowledge base and including them in the prompt.
 
 I compared the two approaches on a set of research documents to see how retrieval changes the quality of answers.
 
 Key points
 
-	I experimented with chunk size and settled on around 200 words. This was a good balance between too little context and too much noise
+* I experimented with chunk size and settled on around 200 words. This was a good balance between too little context and too much noise
 
-	The prompt template adds the query and the retrieved text before asking the model for an answer
+* The prompt template adds the query and the retrieved text before asking the model for an answer
 
 In practice:
 
-	When asked “Who is the founder of NYU?”, the naive model hallucinated a name, while the RAG version said “I don’t know.”
+* When asked “Who is the founder of NYU?”, the naive model hallucinated a name, while the RAG version said “I don’t know.”
 
-	On “difference between hot and cold fusion”, the naive model produced a vague and partly wrong statement, while the RAG version again admitted it didn’t have enough context
+* On “difference between hot and cold fusion”, the naive model produced a vague and partly wrong statement, while the RAG version again admitted it didn’t have enough context
 
 This shows RAG reduces hallucinations and makes the model more honest about what it doesn’t know.
